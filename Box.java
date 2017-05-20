@@ -60,9 +60,13 @@ public class Box {
                     System.out.println("Richtig!");
                     tmp.removeCard(randomKarte.getIndex());
                 } else {
-                    System.out.println("Falsch! Karte in Fach" + (currentFach + 2) + " verschoben!");
                     //Ordne Karte in den nächsten Stapel ein
-                    tmp.moveCard(randomKarte.getIndex(), box.get(currentFach + 1));
+                    if(currentFach == ANZFAECHER-1){
+                        tmp.moveCard(randomKarte.getIndex(), box.get(currentFach));
+                    }else {
+                        System.out.println("Falsch! Karte in Fach" + (currentFach + 2) + " verschoben!");
+                        tmp.moveCard(randomKarte.getIndex(), box.get(currentFach + 1));
+                    }
                 }
 
             }
