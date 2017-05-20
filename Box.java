@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class Box {
     private final int ANZFAECHER = 5;
 
-    ArrayList<Stapel> box;
+    private ArrayList<Stapel> box;
 
     public Box(Stapel s){
         this.box = new ArrayList<>();
